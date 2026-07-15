@@ -1,2 +1,107 @@
-# user-behavior-funnel-analysis
-User behavior funnel analysis to identify conversion rates and drop-off points using event log data.
+## 사용자 행동 로그 데이터를 활용한 Funnel 분석 (Funnel Analysis)
+
+
+| 항목 | 내용 |
+|------|------|
+| 분석 기법 | Funnel Analysis |
+| 개발 환경 | Python 3.13.9, Jupyter Notebook |
+| 사용 라이브러리 | Pandas, Plotly |
+| 데이터 | User Behavior Dataset (실습용 모의 데이터) |
+
+
+---
+
+### ✦ 프로젝트 개요
+
+본 프로젝트는 사용자 행동 로그 데이터를 활용하여 **Funnel(퍼널) 분석**을 수행한 프로젝트이다.
+
+사용자의 **상품 조회**(View)부터 **장바구니**(Cart), **구매**(Purchase) 에 이르는 행동 흐름을 분석하여 **단계별 전환율과 이탈 구간을 확인**하고, 사용자 행동 패턴을 기반으로 서비스 개선 및 마케팅 전략 수립에 활용할 수 있는 인사이트를 도출하는 것을 목표로 한다.
+
+---
+
+### ✦ 프로젝트 목표
+
+- 데이터 전처리 및 결측치 처리
+- DAU(Daily Active Users) 추이 분석
+- 사용자 평균 사이트 체류 시간 분석
+- Funnel 단계별 사용자 수 및 전환율 분석
+- Funnel 단계별 사용자 이탈 구간 분석
+- 비즈니스 인사이트 도출
+
+---
+
+### ✦ 데이터셋
+
+**데이터명**: User Behavior Log Dataset
+
+**데이터 출처**: 가상의 쇼핑몰 사용자 행동 로그 데이터를 바탕으로 제작된 제작된 실습용 모의 데이터
+
+데이터셋은 사용자의 상품 조회부터 구매까지의 행동 로그를 기록한 데이터로, 사용자 행동 흐름(Funnel)을 분석하기 위한 데이터이다.
+
+**주요 데이터 구성**
+
+- 이벤트 정보 (이벤트 발생 시각, 이벤트 종류)
+- 상품 정보 (상품 번호, 카테고리, 브랜드, 가격)
+- 사용자 정보 (고객 번호, 세션 정보)
+
+---
+
+### ✦ 사용 기술
+
+- Python (3.13.9)
+- Jupyter Notebook
+- Pandas
+- Plotly
+
+---
+
+### ✦ 분석 과정
+1. 데이터 불러오기
+2. 데이터 전처리
+3. DAU(Daily Active Users) 추이 분석
+4. 사용자 평균 사이트 체류 시간 분석
+5. Funnel 분석
+6. 데이터 시각화
+7. 분석 결과 및 비즈니스 인사이트 도출
+
+---
+
+### ✦ 분석 결과
+
+RFM 프로젝트와 동일하게 그래프 + 한 줄 설명 형식으로 작성하면 된다.
+
+예를 들면
+
+- DAU(Daily Active Users) 추이
+
+<img width="754" height="412" alt="image" src="https://github.com/user-attachments/assets/42a940a1-7e27-4f62-99d5-ff29f3ce4dd9" />
+
+<img width="731" height="394" alt="image" src="https://github.com/user-attachments/assets/1ec1fd6c-dd3f-42bb-a5fa-9635a9bde547" />
+
+일별, 요일별 활성 사용자 수를 분석하여 서비스 이용 추이를 확인하였다.
+
+
+- Funnel 분석
+
+<img width="726" height="381" alt="image" src="https://github.com/user-attachments/assets/3f45cdef-f620-48d1-8d72-944803230e39" />
+
+View → Cart → Purchase 단계별 사용자 수와 전환율을 분석하여 주요 이탈 구간을 확인하였다.
+
+---
+
+### ✦ 주요 인사이트
+
+- 화요일의 평균 DAU(Daily Active Users)가 가장 높았으며, 주말로 갈수록 감소하는 경향을 확인하였다.
+- Funnel 분석 결과, **장바구니(Cart) → 구매(Purchase)** 단계에서 가장 높은 이탈률(80.7%)이 확인되었다.
+- 구매 직전 단계에서 사용자 이탈이 집중되는 것으로 나타나, 구매 전환 경험 개선이 필요한 것으로 분석되었다.
+- 장바구니 리마인드, 프로모션 제공, 결제 프로세스 개선 등 구매 전환을 유도하기 위한 전략 수립에 활용할 수 있다.
+
+---
+
+### ✦ 프로젝트를 마치며
+
+이번 프로젝트를 통해 사용자 행동 로그 데이터를 기반으로 DAU, 사이트 체류 시간, Funnel 분석을 수행하며 사용자 행동을 다양한 관점에서 분석하는 경험을 할 수 있었다.
+
+특히 단계별 전환율과 사용자 이탈 구간을 직접 계산하고 시각화하는 과정을 통해 데이터 분석 결과를 비즈니스 관점에서 해석하는 방법에 대해 고민해볼 수 있었다.
+
+앞으로는 코호트 분석이나 A/B 테스트와 같은 다양한 사용자 행동 분석 기법을 함께 적용하여, 사용자 경험과 구매 전환율 향상에 기여할 수 있는 분석 프로젝트로 발전시켜 보고자 한다.
